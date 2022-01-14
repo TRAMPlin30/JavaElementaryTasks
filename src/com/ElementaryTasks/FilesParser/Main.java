@@ -39,11 +39,7 @@ public class Main {
             System.out.print("Введите строку на которую нужно заменить найденную:> ");
             REPLACEMENT_STRING = DataFromUser.enterParameters();
             runModeTwo();
-            System.out.print("подождите, идет обработка...");
-            for (int i = 1; i < 30; i++) {
-                System.out.print(".");
-                Thread.sleep(100);
-            }
+
             System.out.println();
             System.out.println("Для просмотра текста с заменой строки откройте файл REPLACEMENT_STRING.txt");
             System.out.println("Путь к файлу: D:\\Softserve\\Java_Elementary_Tasks\\Elementary_Tasks\\src\\com\\ElementaryTasks\\FilesParser\\REPLACEMENT_STRING.txt");
