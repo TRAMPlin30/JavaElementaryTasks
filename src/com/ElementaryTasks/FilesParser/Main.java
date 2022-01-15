@@ -6,7 +6,7 @@ public class Main {
 
     //private static final String PATH_TO_FILE_READ = "D:\\Softserve\\Java_Elementary_Tasks\\Elementary_Tasks\\src\\com\\ElementaryTasks\\FilesParser\\lorem_ipsum.txt";
     private static final String PATH_TO_FILE_WRITE = "D:\\Softserve\\Java_Elementary_Tasks\\Elementary_Tasks\\src\\com\\ElementaryTasks\\FilesParser\\REPLACEMENT_STRING.txt";
-    //private static final String SUBSTRING = "loReM IpsuM";
+    //private static final String SUBSTRING = "loReM IpSuM";
     //private static final String REPLACEMENT_STRING = "REPLACEMENT STRING";
 
     private static String PATH_TO_FILE_READ;
@@ -45,8 +45,6 @@ public class Main {
             System.out.println("Путь к файлу: D:\\Softserve\\Java_Elementary_Tasks\\Elementary_Tasks\\src\\com\\ElementaryTasks\\FilesParser\\REPLACEMENT_STRING.txt");
 
         }
-
-
     }
 
     //================================================ mode 1 ====================================================
@@ -58,7 +56,6 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Не могу открыть данный файл. Проверьте правильность указанного пути!");
         }
-
     }
 
     //================================================ mode 2 ====================================================

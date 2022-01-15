@@ -2,9 +2,7 @@ package com.ElementaryTasks.FilesParser;
 
 import java.io.*;
 
-
 public class MyFileReader {
-
 
     public void readerFromFileToCountSubstring(String filePath, String substring) throws IOException {
 
@@ -43,10 +41,7 @@ public class MyFileReader {
             //System.out.println(newStringFromFile);
             //toWriteCopy = toWriteCopy + newStringFromFile + "\n";
             toWriteCopy.append(newStringFromFile).append("\n");
-
-            //}
         }
         return toWriteCopy.toString();
-
     }
 }
