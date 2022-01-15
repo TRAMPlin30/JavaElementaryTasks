@@ -14,16 +14,16 @@ public class DataFromUser {
             if (AnySide > 0) {
                 return AnySide;
             } else {
-                System.out.println("ОШИБКА!!!  Размер конверта не может быть отрицательным или равен нулю! ");
+                System.out.println("ОШИБКА!!!  Размер конверта не может быть отрицательным или равен нулю!!! ");
                 return data_AnySideOfEnvelope();
             }
         } else {
-            System.out.println("ОШИБКА!!!  Вы ввели не число. Введите число! ");
+            System.out.println("ОШИБКА!!!  Вы ввели не число. Введите число!!! ");
             return data_AnySideOfEnvelope();
         }
     }
 
-    public static String go_on_or_not() {
+    public static String yesOrNo() {
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNext()) {
             String answer = scanner.next();
@@ -37,13 +37,13 @@ public class DataFromUser {
                 System.out.println("ОШИБКА !!! (некорректные данные) ");
                 System.out.println("\"Y\" - продолжить работу программы");
                 System.out.println("\"N\" - завершить работу программы");
-                return go_on_or_not();
+                return yesOrNo();
             }
         } else {
             System.out.println("ОШИБКА !!! (некорректные данные) ");
             System.out.println("\"Y\" - продолжить работу программы");
             System.out.println("\"N\" - завершить работу программы");
-            return go_on_or_not();
+            return yesOrNo();
         }
     }
 }
