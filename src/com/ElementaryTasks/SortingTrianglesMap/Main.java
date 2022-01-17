@@ -75,7 +75,7 @@ public class Main {
             //String squareResult = df.format(square);
             return square;
         } else {
-            System.out.println("I can't build a triangle with this parameters");
+            System.out.println("I can't build a triangle with this parameters!!!");
             return 0;
         }
     }
