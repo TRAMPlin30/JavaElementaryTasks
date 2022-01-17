@@ -1,6 +1,6 @@
 package com.ElementaryTasks.SortingTrianglesSet;
 
-import java.util.Objects;
+
 
 public class TriangleSet implements Comparable<TriangleSet> {
 
@@ -19,6 +19,8 @@ public class TriangleSet implements Comparable<TriangleSet> {
             this.sideC = sideC;
             float p = (float) 0.5 * (sideA + sideB + sideC);
             this.square = (float) Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+        } else {
+            System.out.println("I can't build a triangle with this parameters");
         }
     }
 
@@ -30,6 +32,8 @@ public class TriangleSet implements Comparable<TriangleSet> {
     public float getSquare() {
         return square;
     }
+
+
 
 
     @Override

@@ -12,6 +12,8 @@ public class RunerSet {
 
     public static void main(String[] args) {
 
+        UserSet.instruction();
+
         runProcess();
 
     }
@@ -26,8 +28,12 @@ public class RunerSet {
             setT.add(trOther);
         }
 
-        Set<TriangleSet> sortSetT = new TreeSet<>(setT);
-        print(sortSetT);
+        try {
+            Set<TriangleSet> sortSetT = new TreeSet<>(setT);
+            print(sortSetT);
+        } catch (NullPointerException e) {
+            System.out.println("I can't show this triangle because I can't build a triangle with this parameters");
+        }
     }
 
 
