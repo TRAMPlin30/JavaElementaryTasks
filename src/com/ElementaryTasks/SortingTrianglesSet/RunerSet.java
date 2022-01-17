@@ -32,7 +32,7 @@ public class RunerSet {
             Set<TriangleSet> sortSetT = new TreeSet<>(setT);
             print(sortSetT);
         } catch (NullPointerException e) {
-            System.out.println("I can't show this triangle because I can't build a triangle with this parameters");
+            System.out.println("I can't show this triangle because I can't build a triangle with this parameters!!!");
         }
     }
 
