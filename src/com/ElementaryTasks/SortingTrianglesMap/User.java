@@ -1,4 +1,4 @@
-package com.ElementaryTasks.SortingTriangles;
+package com.ElementaryTasks.SortingTrianglesMap;
 
 import java.io.*;
 import java.util.Scanner;
@@ -11,11 +11,11 @@ public class User {
         System.out.println("The program accepts as parameters any positive numbers. \n");
     }
 
-    public static double enter() {
+    public static float enter() {
 
         Scanner scanner = new Scanner(System.in);
-        if (scanner.hasNextDouble()) {
-            double parameter = scanner.nextDouble();
+        if (scanner.hasNextFloat()) {
+            float parameter = scanner.nextFloat();
             if ((parameter > 0)) {
                 return parameter;
             } else {

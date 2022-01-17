@@ -1,2 +1,5 @@
 # Java_E_Tasks
-5. NumberToString в доработке. На данный момент только до 100. Дальше работаю еще.
+NumberToString в доработке. 
+SortingTriangles в двух вариантах:
+   - SortingTrianglesMap: сохраняем треугольники в Map (без сортировки)
+   - SortingTrianglesSet: сохраняем треугольники в Set (с сортировкой) Comparable

@@ -1,17 +1,18 @@
-package com.ElementaryTasks.SortingTriangles;
+package com.ElementaryTasks.SortingTrianglesMap;
 
 public class Triangle {
 
     private String name;
-    private double sideA;
-    private double sideB;
-    private double sideC;
+    private float sideA;
+    private float sideB;
+    private float sideC;
 
-    public Triangle(String name, double sideA, double sideB, double sideC) {
+    public Triangle(String name, float sideA, float sideB, float sideC) {
         this.name = name;
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
+
     }
 
     public String getName() {
@@ -44,3 +45,5 @@ public class Triangle {
         }
     }
 }
+
+
