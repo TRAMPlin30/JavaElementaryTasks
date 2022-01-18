@@ -1,13 +1,14 @@
 package com.ElementaryTasks.SortingTrianglesMap;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
 
     public static String yesOrNo;
     public static float sideA, sideB, sideC;
     public static String name;
-    public static HashMap<String, Float> map = new HashMap<>();
+    public static Map<String, Float> map = new TreeMap<>();
 
 
     public static void main(String[] args) {
@@ -25,42 +26,94 @@ public class Main {
 
         while (continueBuild()) {                          // спрашиваем у пользователя, хочет ли он добавить еще один и если "Yes", то в цикле добавляем пока не выберет "No"
             Triangle trOther = triangleBuild();
-            map.put(trOther.getName(), calcS(trOther));
+            map.put(trOther.getName(), calcS(trOther));   // формируем словарь ключей и значений
         }
-        printMap(map);
 
-        sortMap(map);
+//----------------------------------- function to sort Map with stream() -------------------------------------------------------
+        Map<String, Float> sortedMapUp = new TreeMap<>();//
+
+        // сортировка в порядке возростания значений
+        map.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue())
+                .forEach(System.out::println);
+
 
         System.out.println();
 
 
+        Map<String, Float> sortedMapDown = new TreeMap<>();
+
+        // сортировка в порядке убывания значений
+        map.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .forEach(System.out::println);
+    }
+
+//------------------------------------------------------------------------------------------
+
+
+//        sortMap(map);
+//
+//        System.out.println();
+
+
         //System.out.println(map);
-    }
-    private static HashMap<String, Float> sortMap(Map<String, Float> map){
-        //DecimalFormat df = new DecimalFormat("0.00");
-        HashMap<String, Float> sortedMap = new HashMap<>();
-        ArrayList<Float> values = new ArrayList<>();
-        for (String key: map.keySet()) { // пробегаемся по каждому ключу
-            values.add(map.get(key)); // вытаскиваем значения у каждого ключа и ложим в список
-        }
-        Collections.sort(values);
-        System.out.println(values);
 
-        for (String key: map.keySet()) {
-            for (float i : values) {
+    //======================================== functiom to sort Map ==================================================================
+    // //comparator ???
 
-                float min = Collections.min(values);
 
-                if (i == map.get(key) && map.get(key) == min) {
-                    sortedMap.put(key, i);
 
-                    //map.values().remove(i);
-                }
-            }
-        }
-        System.out.println(sortedMap);
-        return sortedMap;
-    }
+//    private static HashMap<String, String> sortMap(Map<String, Float> map){
+//        ArrayList<String> keyList = new ArrayList<>();
+//        ArrayList<String> valueList = new ArrayList<>();
+//        HashMap<String, String> sortedMap = new HashMap<>();
+//
+//        for (Map.Entry<String, Float> entry: new ArrayList<>(map.entrySet())) {
+//            String key = entry.getKey();
+//            keyList.add(key);
+//            Float value = entry.getValue();
+//            valueList.add(String.valueOf(value));
+//
+//            Collections.sort(keyList);
+//            Collections.sort(valueList);
+//        }
+//
+//            for (String i: keyList) {
+//                for (String j : valueList) {
+//
+//                    sortedMap.put(i, j);
+//
+//                }
+//            }
+//        System.out.println(sortedMap);
+//        return sortedMap;
+
+//        //DecimalFormat df = new DecimalFormat("0.00");
+//        HashMap<Float, String> sortedMap = new HashMap<>();
+//        ArrayList<Float> values = new ArrayList<>();
+//        for (String key: map.keySet()) { // пробегаемся по каждому ключу
+//            values.add(map.get(key)); // вытаскиваем значения у каждого ключа и пробрасываем в список
+//        }
+//        Collections.sort(values);
+//        System.out.println(values);
+//
+//        for (String key: map.keySet()) {
+//            for (float i : values) {
+//
+//                //float min = Collections.min(values);
+//
+//                if (i == map.get(key)) {
+//                    sortedMap.put(i, key);
+//
+//                }
+//            }
+//        }
+//        System.out.println(sortedMap);
+
+
+    //========================================================================================================================
+
 
     private static float calcS(Triangle triangle) {
         //DecimalFormat df = new DecimalFormat("0.00");
