@@ -38,9 +38,6 @@ public class Main {
          * Для простой сортировки по возрастанию применяется метод sorted():
          */
 
-        Map<String, Float> sortedMapUp = new TreeMap<>();// !!! выяснить как можно сортированный map.entrySet().stream() пробросить обратно в
-        // такой же тип как map (Map<String, Float>)
-
         //--------------- сортировка в порядке возростания значений ---------------
         map.entrySet().stream()
                 .sorted(Map.Entry.comparingByValue())
@@ -54,11 +51,11 @@ public class Main {
         //-----------------------------------------------------------------------------
 
         System.out.println();
+        System.out.println("==========Triangles List==============");
 
         //--------------- сортировка в порядке убывания значений ---------------
 
 
-        // сортировка в порядке убывания значений
         map.entrySet().stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .forEach(System.out::println);
@@ -75,7 +72,7 @@ public class Main {
 
 
     //======================================== function to sort Map ==================================================================
-    // //comparator ???
+
 
 
 //    private static HashMap<String, String> sortMap(Map<String, Float> map){
