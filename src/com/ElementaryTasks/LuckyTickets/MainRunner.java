@@ -14,7 +14,13 @@ public class MainRunner {
         String indicator = FileReader.getIndicator(tickets);
         ArrayList<Integer> ticketsDigit = FileReader.removeMethod(tickets);
 
-        System.out.println(indicator);
-        System.out.println(ticketsDigit);
+        MoscowMethod.calculate(ticketsDigit);
+
+//        System.out.println(indicator);
+//        System.out.println(ticketsDigit);
+
+
+
+
     }
 }
