@@ -3,6 +3,10 @@ package com.ElementaryTasks.LuckyTickets;
 import java.util.ArrayList;
 
 public class MoscowMethod {
+    /**
+     * Московский — если на автобусном билете напечатано шестизначное число,
+     * и сумма первых трёх цифр равна сумме последних трёх, то этот билет считается счастливым.
+     */
 
     public static int counter = 0;
 

@@ -101,8 +101,11 @@ public class Main {
 //        return sortedMap;
 
 //        //DecimalFormat df = new DecimalFormat("0.00");
+//-------------------------------------------------------------------------------------------------------------------------------------
 //        HashMap<Float, String> sortedMap = new HashMap<>();
+
 //        ArrayList<Float> values = new ArrayList<>();
+
 //        for (String key: map.keySet()) { // пробегаемся по каждому ключу
 //            values.add(map.get(key)); // вытаскиваем значения у каждого ключа и пробрасываем в список
 //        }
