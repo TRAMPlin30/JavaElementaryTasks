@@ -1,6 +1,6 @@
 package com.ElementaryTasks.AtOnlineLessons.MyPrototip;
 
-public class Robot { //implements myCloneable
+public class Robot { //implements myCloneaable
     private int id;
     private String name;
     private String processor;
@@ -12,7 +12,7 @@ public class Robot { //implements myCloneable
     }
     //@Override
     public Robot copy() {    //Object если тип указан как Object, то в дальнейшем мы можем указывать любой тип с помощью приведения типов (<имя класса объекта> - тип данных)
-        Robot copy = new Robot(this.id, this.name, this.processor);
+        Robot copy = new Robot(id, name, processor);
         return copy;
     }
 

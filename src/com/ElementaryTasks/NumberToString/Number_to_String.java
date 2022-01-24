@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Number_to_String {
 
-    private static final String[] UNITS = {"ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь",
+    private static final String[] UNITS = {"", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь",
             "девять"};
     private static final String[] DIGITS = {"","одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", // пустой элемент - для того что б не отнимать 1 от индекса (строка -39 MainCases)
             "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать"};
@@ -58,20 +58,21 @@ public class Number_to_String {
                     List<Integer> part3 = numList.subList(2,5);
                     String twoD = MainCases.caseTwo(part2, UNITS, DIGITS, DOZENS);
                     String threeD = MainCases.caseThree(part3, UNITS, DIGITS, DOZENS, HUNDREDS);
-                    if (twoD.contains(" один")) {
-                        System.out.print(twoD.replaceFirst(" один", " одна тысяча ")+threeD);
-                    } else if (twoD.contains(" два")) {
-                        System.out.print(twoD.replaceFirst(" два", " две тысячи ") + threeD);
-                    } else if (twoD.contains(" три") || twoD.contains(" четыре")) {
-                        System.out.print(twoD + " тысячи " + threeD);
-                    } else {
-                        System.out.print(twoD + " тысяч " + threeD);
-                    }
+                    MainCases.maleFemale(twoD, threeD);
                 } break;
 
-                case 6: { // [1,0,0, 0,0,0]
-                    System.out.println("");
+                case 6: { // [9,9,9, 9,9,9]
+                    List<Integer> part3_1 = numList.subList(0, 3);
+                    List<Integer> part3_2 = numList.subList(3,6);
+                    String threeD_1 = MainCases.caseThree(part3_1, UNITS, DIGITS, DOZENS, HUNDREDS);
+                    String threeD_2 = MainCases.caseThree(part3_2, UNITS, DIGITS, DOZENS, HUNDREDS);
+                    MainCases.maleFemale(threeD_1,threeD_2);
+                } break;
+
+                case 7: { // [9, 9,9,9, 9,9,9]
+
                 }
+
 
             }
         }

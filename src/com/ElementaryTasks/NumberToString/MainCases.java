@@ -29,7 +29,7 @@ public class MainCases {
         } else if (num1 == 1 && num2 > 0) {                          //[1,1-9]// если число из диапазона списка DIGITS [11,12,13....19]
             return (DIGITS[num2]);                                   // twoCase берем из списка DIGITS
         } else {
-            return (DOZENS[num1] + " " + UNITS[num2]);               //[2-9,1-9]// если число из диапазона 21 - 99
+            return (DOZENS[num1] + " " + UNITS[num2]+" ");               //[2-9,1-9]// если число из диапазона 21 - 99
         }
     }
     //----------------------------------------------------------------------------------------------------------------
@@ -54,7 +54,25 @@ public class MainCases {
         } else if (num2 == 1 && num3 > 0) {
             return (HUNDREDS[num1] + " " + DIGITS[num3]);                          // 111 - 119
         } else {
-            return (HUNDREDS[num1] + " " + DOZENS[num2]+" "+UNITS[num3]);         //121...555...965
+            return (HUNDREDS[num1] + " " + DOZENS[num2]+" "+UNITS[num3]+" ");         //121...555...965  // пробел в конце нужен для нормальной работы функции maleFemale
         }
     }
+    //----------------------------------------------------------------------------------------------------------------
+
+
+    //-------------------------- метод, для замены некоторых случаев вывода ------------------------------------------
+
+    public static void maleFemale(String str1, String str2) {
+        if (str1.contains(" один ")) {
+            System.out.print(str1.replaceFirst(" один ", " одна тысяча ")+str2);
+        } else if (str1.contains(" два ")) {
+            System.out.print(str1.replaceFirst(" два ", " две тысячи ") + str2);
+        } else if (str1.contains(" три") || str1.contains(" четыре")) {
+            System.out.print(str1 + " тысячи " + str2);
+        } else {
+            System.out.print(str1 + " тысяч " + str2); // str = 5,6,7,8,9,10...
+        }
+
+    }
+    //----------------------------------------------------------------------------------------------------------------
 }
