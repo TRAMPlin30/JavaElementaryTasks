@@ -6,7 +6,7 @@ public class Main {
         Robot mainRobot = new Robot(5, "Verter", "X86");
         System.out.println(mainRobot);
 
-//        Robot robot1 = new Robot(5, "Verter", "X86");
+//        Robot robot1 = new Robot(5, "Verter", "X86"); ///
 //        Robot robot2 = new Robot(5, "Verter", "X86");
 //        Robot robot3 = new Robot(5, "Verter", "X86");
 
