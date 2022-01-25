@@ -60,19 +60,39 @@ public class MainCases {
     //----------------------------------------------------------------------------------------------------------------
 
 
-    //-------------------------- метод, для замены некоторых случаев вывода ------------------------------------------
+    //-------------------------- метод, для замены случаев вывода тысяч ----------------------------------------------
 
     public static void maleFemale(String str1, String str2) {
-        if (str1.contains(" один ")) {
-            System.out.print(str1.replaceFirst(" один ", " одна тысяча ")+str2);
-        } else if (str1.contains(" два ")) {
-            System.out.print(str1.replaceFirst(" два ", " две тысячи ") + str2);
-        } else if (str1.contains(" три") || str1.contains(" четыре")) {
-            System.out.print(str1 + " тысячи " + str2);
-        } else {
-            System.out.print(str1 + " тысяч " + str2); // str = 5,6,7,8,9,10...
-        }
 
+        if (!str1.equals(" ")) { // для миллиона - если стотысячные значения нулевые 2000002, 2000587, 1000021, 1000001, 5000521
+            if (str1.contains(" один")) {
+                System.out.print(str1.replaceFirst(" один", " одна тысяча ")+str2);
+            } else if (str1.contains(" два")) {
+                System.out.print(str1.replaceFirst(" два", " две тысячи ") + str2);
+            } else if (str1.contains(" три") || str1.contains(" четыре")) {
+                System.out.print(str1 + " тысячи " + str2);
+            } else {
+                System.out.print(str1 + " тысяч " + str2); // str = 5,6,7,8,9,10...
+            }
+        } else {
+            System.out.print(str2);
+        }
     }
     //----------------------------------------------------------------------------------------------------------------
+
+
+    //----------------------------------- метод, для замены случаев вывода тысяч ------------------------------------
+
+    public static void maleFemaleM(String str1, String str2, String str3) {
+        if (str1.contains(" один ")) {
+            System.out.print(str1 + " миллион ");
+            MainCases.maleFemale(str2,str3);
+        } else if (str1.contains(" два ") || str1.contains(" три") || str1.contains(" четыре")) {
+            System.out.print(str1 + " миллиона ");
+            MainCases.maleFemale(str2,str3);
+        } else {
+            System.out.print(str1 + " миллионов ");
+            MainCases.maleFemale(str2, str3);
+        }
+    }
 }

@@ -15,7 +15,7 @@ public class Number_to_String {
 
     public static void transform(int number) {
 
-        if (number >=0  && number <= 999999999) {
+        if (number > 0  && number <= 999999999) {
 
             List<Integer> numList = InputNumber.numberList(number);                       // [4, 5, 2, 0, 1, 5, 4, 7, 8] число 452015478 в список из отдельных цифр
             int size = numList.size();                                                    //длина списка [4, 5, 2, 0, 1, 5, 4, 7, 8]
@@ -70,11 +70,48 @@ public class Number_to_String {
                 } break;
 
                 case 7: { // [9, 9,9,9, 9,9,9]
+                    List<Integer> part1 = numList.subList(0, 1);
+                    List<Integer> part3_1 = numList.subList(1,4);
+                    List<Integer> part3_2 = numList.subList(4,7);
+                    String oneD = MainCases.caseOne(part1, UNITS); // [9] миллионов
+                    String threeD_1 = MainCases.caseThree(part3_1, UNITS, DIGITS, DOZENS, HUNDREDS);  // [9,9,9] тысяч
+                    String threeD_2 = MainCases.caseThree(part3_2, UNITS, DIGITS, DOZENS, HUNDREDS);  // [9,9,9]
+                    if (oneD.equals("один")) {
+                        System.out.print(oneD + " миллион ");
+                        MainCases.maleFemale(threeD_1,threeD_2);
+                    } else if (oneD.equals("два") || oneD.equals("три") || oneD.equals("четыре")) {
+                        System.out.print(oneD + " миллиона ");
+                        MainCases.maleFemale(threeD_1,threeD_2);
+                    } else {
+                        System.out.print(oneD + " миллионов ");
+                        MainCases.maleFemale(threeD_1,threeD_2);
+                    }
+                } break;
 
-                }
+                case 8: { // [9,9, 9,9,9, 9,9,9]
+                    List<Integer> part2 = numList.subList(0, 2);
+                    List<Integer> part3_1 = numList.subList(2,5);
+                    List<Integer> part3_2 = numList.subList(5,8);
+                    String twoD = MainCases.caseTwo(part2, UNITS, DIGITS, DOZENS); // [9,9] миллионов
+                    String threeD_1 = MainCases.caseThree(part3_1, UNITS, DIGITS, DOZENS, HUNDREDS);  // [9,9,9] тысяч
+                    String threeD_2 = MainCases.caseThree(part3_2, UNITS, DIGITS, DOZENS, HUNDREDS);  // [9,9,9]
+                    MainCases.maleFemaleM(twoD, threeD_1, threeD_2);
+                } break;
 
-
+                case 9: { // [9,9,9, 9,9,9, 9,9,9]
+                    List<Integer> part3_1 = numList.subList(0, 3);
+                    List<Integer> part3_2 = numList.subList(3, 6);
+                    List<Integer> part3_3 = numList.subList(6, 9);
+                    String three1 = MainCases.caseThree(part3_1, UNITS, DIGITS, DOZENS, HUNDREDS);  // [9,9,9] миллионов
+                    String three2 = MainCases.caseThree(part3_2, UNITS, DIGITS, DOZENS, HUNDREDS);  // [9,9,9] тысяч
+                    String three3 = MainCases.caseThree(part3_3, UNITS, DIGITS, DOZENS, HUNDREDS);  // [9,9,9]
+                    MainCases.maleFemaleM(three1, three2, three3);
+                } break;
             }
+        } else if (number == 1000000000) {
+            System.out.println("Один миллиард");
+        } else if (number == 0) {
+            System.out.println("Ноль");
         }
     }
 }
