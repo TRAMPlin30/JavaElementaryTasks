@@ -20,13 +20,13 @@ public class UserInteraction {
             if ((number >= 0) && (number <= 1000000000)) {
                 return number;
             } else {
-                System.out.print("Error!!! \n" +
-                        "Out of range!!!, \n" + "please enter a correct number. \n");
+                System.out.print("Error!!!! \n" +
+                        "Out of range!!!!, \n" + "please enter a correct number. \n");
                 System.out.print("The program accepts any positive numbers in the range from 0 to 1000000000. \n");
                 return enterNumber();
             }
         } else {
-            System.out.print("Error!!! \n" +
+            System.out.print("Error!!!! \n" +
                     "You didn't enter an integer number, please enter an integer number \n");
             System.out.print("The program accepts any positive numbers in the range from 0 to 1000000000. \n");
             return enterNumber();
