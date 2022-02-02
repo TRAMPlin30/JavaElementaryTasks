@@ -1,7 +1,5 @@
 package com.ElementaryTasks.SortingTrianglesSet;
 
-
-
 public class TriangleSet implements Comparable<TriangleSet> {
 
     private String name;
@@ -11,11 +9,6 @@ public class TriangleSet implements Comparable<TriangleSet> {
     private float square;
 
     public TriangleSet(String name, float sideA, float sideB, float sideC) {
-        /**
-         * Треугольник существует только тогда, когда сумма двух его сторон больше третьей.
-         * ... Если хотя бы в одном случае сторона окажется больше либо равна сумме двух других,
-         * то треугольника с такими сторонами не существует.
-         */
 
         if ((sideA + sideB)> sideC && (sideB + sideC)> sideA && (sideC + sideA)> sideB) {
             this.name = name;
@@ -33,22 +26,18 @@ public class TriangleSet implements Comparable<TriangleSet> {
         return name;
     }
 
-
     public float getSquare() {
         return square;
     }
 
-
-
-
     @Override
     public int compareTo (TriangleSet that){
-        if (this.square > that.getSquare()) { //отрицательное, если вызывающий объект меньше объекта, переданного в качестве параметра;
+        if (this.square > that.getSquare()) {
             return -1;
         }
-        if (this.square < that.getSquare()) { //положительное, если вызывающий объект больше объекта, переданного в качестве параметра;
+        if (this.square < that.getSquare()) {
             return 1;
         }
-        return name.compareTo(that.getName()); //нуль, если объекты равны. (или по другому параметру)
+        return name.compareTo(that.getName());
     }
 }

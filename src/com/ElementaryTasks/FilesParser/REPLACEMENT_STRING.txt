@@ -1,9 +1,9 @@
-есть много вариантов REPLACEMENT STRING, но большинство из них имеет не всегда приемлемые модификации,
-например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.
-если вам нужен REPLACEMENT STRING для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки,
-скрытой в середине абзаца. также все другие известные генераторы REPLACEMENT STRING используют один
-и тот же текст, который они просто повторяют, пока не достигнут нужный объём.
-это делает предлагаемый здесь генератор единственным настоящим REPLACEMENT STRING генератором.
-он использует словарь из более чем 200 латинских слов, а также набор моделей предложений.
-в результате сгенерированный REPLACEMENT STRING выглядит правдоподобно, не имеет повторяющихся
-абзацов или "невозможных" слов.
+but i must explain to you how all REPLACEMENT STRING this mistaken idea of denouncing pleasure and praising pain was born and i will give
+you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the
+master-builder of human REPLACEMENT STRING happiness. no one rejects, dislikes, or avoids pleasure itself, because it is pleasure,
+but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+nor again is there anyone who loves or pursues REPLACEMENT STRING or desires to obtain pain of itself, because it is pain, but because
+occasionally circumstances occur in which toil and pain can procure him some great pleasure. to take a trivial example,
+which of us ever undertakes REPLACEMENT STRING laborious physical exercise, except to obtain some advantage from it? but who has any
+right to find fault with a man who chooses REPLACEMENT STRING to enjoy a pleasure that has no annoying consequences, or one who avoids
+a pain that produces no resultant pleasure

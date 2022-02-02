@@ -2,7 +2,6 @@ package com.ElementaryTasks.SortingTrianglesSet;
 
 import java.util.*;
 
-
 public class RunerSet {
 
     public static String yesOrNo;
@@ -13,7 +12,6 @@ public class RunerSet {
     public static void main(String[] args) {
 
         UserSet.instruction();
-
         runProcess();
 
     }
@@ -21,13 +19,12 @@ public class RunerSet {
     private static void runProcess() {
 
         TriangleSet trFirst = triangleBuild();
-        setT.add(trFirst);                                  //добавляем первый треугольник
+        setT.add(trFirst);
 
-        while (continueBuild()) {                          // спрашиваем у пользователя, хочет ли он добавить еще один и если "Yes", то в цикле добавляем пока не выберет "No"
+        while (continueBuild()) {
             TriangleSet trOther = triangleBuild();
             setT.add(trOther);
         }
-
         try {
             Set<TriangleSet> sortSetT = new TreeSet<>(setT);
             print(sortSetT);
@@ -36,9 +33,7 @@ public class RunerSet {
         }
     }
 
-
     private static TriangleSet triangleBuild() {
-
         System.out.print("Enter name of Triangle: ");
         name = UserSet.enterName();
         System.out.print("Enter size of side A: ");

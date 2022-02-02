@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class DataFromUser {
 
     public static String modeSelection() {
-        System.out.println("Выберете режим работы парсера текстовых (txt) файлов. \n");
-        System.out.println("Введите - 1: парсер найдет указанную Вами строку в указанном Вами файле");
-        System.out.println("В данном режиме Вам нужно будет указать искомую строку и путь к файлу с учетом имени. \n");
-        System.out.println("Введите - 2: парсер заменит указанную Вами строку в  на необходимую в указанном Вами файле");
-        System.out.println("В данном режиме Вам нужно будет указать строки для поиска и замены а также путь к файлу с учетом имени. \n");
-        System.out.print("Сделайте Ваш выбор: ");
+        System.out.println("Choose the mode of the file parser. \n");
+        System.out.println("Enter - 1: parser will find the quantity of string in your file");
+        System.out.println("In this case you must enter the path to the file and also you mast determine word or string which you find. \n");
+        System.out.println("Enter - 2: parser will replace the existing string with another in your file");
+        System.out.println("In this case you must enter the path to the file and also you mast determine word or string which you replace. \n");
+        System.out.print("What mode will you choose: ");
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNext()) {
             String answer = scanner.next();
@@ -22,21 +22,20 @@ public class DataFromUser {
             } else if (answerTwo) {
                 return "2";
             } else {
-                System.out.println("ОШИБКА !!! (некорректные данные) ");
-                System.out.println("Введите:  \"1\" - работа программы в режиме поиска указанной строки в файле");
-                System.out.println("Введите:  \"2\" - работа программы в режиме замены указанной строки в файле");
+                System.out.println("Error!!! (incorrect data) ");
+                System.out.println("Enter:  \"1\" - parser will find the quantity of string in your file");
+                System.out.println("Enter:  \"2\" - parser will replace the existing string with another in your file");
                 return modeSelection();
             }
         } else {
-            System.out.println("ОШИБКА !!! (некорректные данные) ");
-            System.out.println("Введите:  \"1\" - работа программы в режиме поиска указанной строки в файле");
-            System.out.println("Введите:  \"2\" - работа программы в режиме замены указанной строки в файле");
+            System.out.println("Error!!! (incorrect data) ");
+            System.out.println("Enter:  \"1\" - parser will find the quantity of string in your file");
+            System.out.println("Enter:  \"2\" - parser will replace the existing string with another in your file");
             return modeSelection();
         }
     }
 
     public static String enterParameters() {
-
         InputStream inputStream = System.in;
         Reader inputStreamReader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
@@ -44,19 +43,8 @@ public class DataFromUser {
             String param = bufferedReader.readLine();
             return param;
         } catch (IOException e) {
-            System.out.println("ОШИБКА!!!  Введите данные в соответствии с запросом! ");
+            System.out.println("Error!!! (incorrect data) ");
         }
         return enterParameters();
-
-
-        //Scanner scanner = new Scanner(System.in);
-        //if (scanner.hasNext()) {
-        //String answer = scanner.next();
-        //return answer;
-        //} else {
-        //System.out.println("ОШИБКА!!!  Введите данные в соответствии с запросом! ");
-        //return enterParameters();
-        //}
     }
-
 }

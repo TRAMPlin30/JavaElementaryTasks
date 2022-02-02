@@ -1,9 +1,9 @@
-Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации,
-например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.
-Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки,
-скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один
-и тот же текст, который они просто повторяют, пока не достигнут нужный объём.
-Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором.
-Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений.
-В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся
-абзацов или "невозможных" слов.
+But I must explain to you how all Lorem Ipsum this mistaken idea of denouncing pleasure and praising pain was born and I will give
+you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the
+master-builder of human Lorem Ipsum happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure,
+but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+Nor again is there anyone who loves or pursues Lorem Ipsum or desires to obtain pain of itself, because it is pain, but because
+occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example,
+which of us ever undertakes Lorem Ipsum laborious physical exercise, except to obtain some advantage from it? But who has any
+right to find fault with a man who chooses Lorem Ipsum to enjoy a pleasure that has no annoying consequences, or one who avoids
+a pain that produces no resultant pleasure

@@ -38,7 +38,7 @@ public class User {
         try {
             String param = bufferedReader.readLine();
             return param;
-        } catch (IOException e) {  // зачем данный IOException - что он ловит???
+        } catch (IOException e) {
             System.out.println("Error!!!  Enter correct parameters! ");
         }
         return enterName();

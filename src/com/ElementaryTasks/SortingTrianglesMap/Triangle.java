@@ -12,7 +12,6 @@ public class Triangle {
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
-
     }
 
     public String getName() {
@@ -31,13 +30,8 @@ public class Triangle {
         return sideC;
     }
 
-
     public boolean checkTrue() {
-        /**
-         * Треугольник существует только тогда, когда сумма двух его сторон больше третьей.
-         * ... Если хотя бы в одном случае сторона окажется больше либо равна сумме двух других,
-         * то треугольника с такими сторонами не существует.
-         */
+
         if ((sideA + sideB)> sideC && (sideB + sideC)> sideA && (sideC + sideA)> sideB) {
             return true;
         } else {
