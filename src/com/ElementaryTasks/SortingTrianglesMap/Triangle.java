@@ -30,8 +30,8 @@ public class Triangle {
         return sideC;
     }
 
-    public boolean checkTrue() {
 
+    public boolean checkTrue() {
         if ((sideA + sideB)> sideC && (sideB + sideC)> sideA && (sideC + sideA)> sideB) {
             return true;
         } else {

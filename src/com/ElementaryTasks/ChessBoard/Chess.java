@@ -21,13 +21,13 @@ public class Chess {
 
     private void boardLineOne() {
         for (int i = 1; i <= horizon; i += 1)
-            System.out.print("*  ");
+            System.out.print("* ");
         System.out.println();
     }
 
     private void boardLineTwo() {
         for (int i = 1; i <= horizon; i += 1)
-            System.out.print("  *");
+            System.out.print(" *");
         System.out.println();
     }
 }
